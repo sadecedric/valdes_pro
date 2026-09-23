@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Header from '@/components/Header';
 import ChatBubble from '@/components/ChatBubble';
+import VoiceNote from '@/components/VoiceNote';
 import PlatformsCard from '@/components/PlatformsCard';
 import ChatInput from '@/components/ChatInput';
 import { WELCOME_MESSAGE } from '@/lib/config';
@@ -67,6 +68,11 @@ export default function Page() {
     }
   };
 
+  const QUICK_REPLIES = [
+    'Comment gagner le FIFA ?',
+    'Je veux score exact',
+  ];
+
   return (
     <div className={isDark ? 'dark' : ''}>
       <div className="flex flex-col h-dvh max-w-md mx-auto bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-white overflow-hidden">
@@ -75,6 +81,24 @@ export default function Page() {
 
         <main className="flex-1 overflow-y-auto min-h-0 px-3 py-4 space-y-3">
           <ChatBubble sender="assistant" text={WELCOME_MESSAGE} />
+
+          <ChatBubble sender="assistant">
+            <VoiceNote src="/welcome.ogg" />
+          </ChatBubble>
+
+          <div className="flex flex-wrap gap-2">
+            {QUICK_REPLIES.map((question) => (
+              <button
+                key={question}
+                type="button"
+                onClick={() => handleSend(question)}
+                disabled={isLoading}
+                className="text-xs font-semibold px-3 py-2 rounded-full shadow-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed bg-white dark:bg-gray-900 text-green-600 dark:text-green-400 border border-gray-300 dark:border-gray-700"
+              >
+                {question}
+              </button>
+            ))}
+          </div>
 
           {messages.map((msg) => (
             <ChatBubble key={msg.id} sender={msg.sender} text={msg.text} />
