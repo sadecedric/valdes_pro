@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { PLATFORMS, WHATSAPP_URL } from '@/lib/config';
+import { PLATFORMS } from '@/lib/config';
 
 function ExternalLinkIcon() {
   return (
@@ -54,7 +54,7 @@ export default function PlatformsCard() {
     <div className="px-3 pt-3 pb-1">
       <div className="bg-white dark:bg-gray-900 rounded-xl px-3 py-2.5 border border-gray-200 dark:border-gray-800 shadow-sm">
         <p className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2">
-          Plateformes recommandées
+          Plateforme recommandée
         </p>
 
         <div className="flex flex-wrap gap-2 mb-3">
@@ -90,21 +90,6 @@ export default function PlatformsCard() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 border-t border-gray-100 dark:border-gray-800 pt-2">
-          <span className="text-xs text-gray-500 dark:text-gray-400">
-            Retrouvez-moi sur
-          </span>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-75 transition-opacity"
-            title="WhatsApp"
-            aria-label="Contact WhatsApp"
-          >
-            <WhatsAppIcon />
-          </a>
-        </div>
       </div>
     </div>
   );

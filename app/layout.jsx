@@ -1,10 +1,11 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Florian_TC Assistant',
+  title: 'VALDES PRO',
   description: 'Assistant expert en pronostics sportifs',
   icons: {
-    icon: '/florian.svg',
+    icon: '/pp.jpeg',
+    apple: '/pp.jpeg',
   },
 };
 

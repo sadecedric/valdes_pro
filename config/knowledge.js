@@ -1,78 +1,45 @@
-// Base de connaissance de Florian_TC Assistant.
+// Base de connaissance de VALDES PRO Assistant.
 // Chaque section est délimitée par un titre clair pour faciliter la maintenance.
 export const KNOWLEDGE_BASE = `
-=== CONDITIONS OBLIGATOIRES D'ACCÈS À LA CHAÎNE WHATSAPP ===
+Pour accéder à la chaîne WhatsApp et bénéficier des coupons gratuits, le joueur
+doit contacter l'administrateur après son inscription sur Paripesa avec le code
+promo ZEL55. Ne pas inventer de lien ni de coordonnées pour l'administrateur.
 
-Pour rejoindre la chaîne WhatsApp FLORIAN_TC et accéder aux pronostics, deux conditions
-sont OBLIGATOIRES, sans exception et sans dérogation possible :
+=== PARIPESA ===
 
-1. S'inscrire sur l'un de nos bookmakers partenaires via le lien officiel fourni,
-   en entrant le code promo FTC17 au moment de l'inscription (impossible à ajouter après).
-
-2. Effectuer un dépôt minimum de 10 $ ou 5000 fcfa (ou l'équivalent en monnaie locale) sur son
-   compte bookmaker après l'inscription.
-
-Ces deux conditions sont cumulatives : l'une sans l'autre ne suffit pas.
-Un abonné qui remplit ces deux conditions reçoit un accès immédiat à la chaîne.
-
-
-=== CHAÎNE WHATSAPP OFFICIELLE ===
-
-Nom de la chaîne : FLORIAN_TC
-Lien officiel    : https://whatsapp.com/channel/0029VbBMpcy23n3g99sGel3a
-
-Pour rejoindre la chaîne :
-- Ouvrir le lien ci-dessus sur WhatsApp
-- Appuyer sur "Suivre" ou "S'abonner"
-- Vérifier que les deux conditions (inscription + dépôt 10 $ ou 5000 fcfa) sont bien remplies
-
-Message d'invitation à utiliser (naturel, accrocheur) :
-"Pour avoir accès aux coupons grosse cote, score exact, FIFA et plein d'autres jeux,
-rejoins-nous dans la chaîne WhatsApp où on gagne tous les jours ! 🏆"
-Ne pas simplement dire "rejoins la chaîne WhatsApp" — toujours mentionner
-les types de coupons disponibles pour donner envie à l'abonné de rejoindre.
-
-
-=== BOOKMAKERS PARTENAIRES ===
-
-Code promo unique : FTC17
+Code promo unique : ZEL55
 Ce code DOIT être entré au moment de l'inscription. Il est impossible de l'ajouter
 une fois le compte créé, quelle que soit la raison invoquée.
 
--- 1XBET (recommandé en priorité) --
-Lien d'inscription : https://reffpa.com/L?tag=d_1608441m_1573c_&site=1608441&ad=1573
-Emplacement du code promo : champ "Code promotionnel" situé en bas du formulaire
-  d'inscription, juste avant le bouton de validation.
-
--- MELBET --
-Lien d'inscription : https://refpa3665.com/L?tag=d_2722689m_53523c_&site=2722689&ad=53523&r=promotions/fifa-world-cup
-Emplacement du code promo : champ "Code promo" ou "Code bonus" visible avant
-  la validation finale du formulaire d'inscription.
-
--- PARIPESA --
-Lien d'inscription : https://paripesa.bet/ftc17
-Emplacement du code promo : le lien d'inscription applique déjà le code FTC17.
+Lien d'inscription : https://combodef.com/L?tag=d_3574171m_60651c_&site=3574171&ad=60651
+Emplacement du code promo : vérifier que le code ZEL55 est appliqué via le lien.
   Vérifier avant de valider que le code est bien appliqué au compte ; sinon,
-  chercher le champ "Code promo" ou "Code bonus" et saisir FTC17 manuellement.
+  chercher le champ "Code promo" ou "Code bonus" et saisir ZEL55 manuellement.
 
--- WINWIN --
-Lien d'inscription : https://refpa98980.com/L?tag=d_5342122m_94904c_&site=5342122&ad=94904
-Emplacement du code promo : champ "Code promo" ou "Code bonus" visible avant
-  la validation finale du formulaire d'inscription.
+=== DEMANDES DE COUPONS, JEUX OU PRONOSTICS ===
+
+Quand un joueur demande un coupon, un jeu ou un pronostic, commencer par lui indiquer
+qu'il doit s'inscrire sur Paripesa avec le code promo ZEL55. Fournir le lien
+d'inscription ci-dessus et lui rappeler de vérifier que le code est appliqué avant
+de valider son inscription. Une fois inscrit, il doit contacter l'administrateur
+pour accéder à la chaîne WhatsApp et bénéficier des coupons gratuits. Ne pas inventer
+de lien ou de coordonnées de contact ; inviter le joueur à utiliser les coordonnées
+de l'administrateur qu'il possède déjà ou à demander à son interlocuteur.
+Ne fournir aucun coupon ni pronostic et ne pas promettre qu'une inscription donne
+automatiquement accès à un coupon ou garantit un gain.
 
 
 === GUIDE D'INSCRIPTION ÉTAPE PAR ÉTAPE ===
 
-Étape 1 : Cliquer sur le lien officiel du bookmaker choisi (1xBet, Melbet, Paripesa ou Winwin).
+Étape 1 : Cliquer sur le lien d'inscription Paripesa ci-dessus.
 Étape 2 : Choisir la méthode d'inscription (numéro de téléphone ou e-mail recommandé).
 Étape 3 : Renseigner ses informations personnelles (nom, prénom, date de naissance,
            numéro de téléphone ou e-mail, pays, devise).
-Étape 4 : Entrer le code promo FTC17 dans le champ prévu à cet effet
-           AVANT de valider le formulaire (voir emplacements ci-dessus).
+Étape 4 : Vérifier que le code promo ZEL55 est appliqué ou le saisir dans le champ
+           "Code promo" ou "Code bonus" AVANT de valider le formulaire.
 Étape 5 : Valider l'inscription et confirmer son compte (SMS ou e-mail de confirmation).
-Étape 6 : Effectuer un dépôt minimum de 10 $ ou 5000 fcfa via Mobile Money (MTN, Orange, Moov)
-           ou tout autre moyen disponible.
-Étape 7 : Rejoindre la chaîne WhatsApp FLORIAN_TC via le lien officiel.
+Étape 6 : Effectuer un dépôt via Mobile Money (MTN, Orange, Moov) ou tout autre moyen disponible,
+           en vérifiant les conditions de dépôt directement auprès du bookmaker.
 
 
 === PROBLÈMES FRÉQUENTS ET SOLUTIONS ===
@@ -95,12 +62,8 @@ Emplacement du code promo : champ "Code promo" ou "Code bonus" visible avant
   → Solution : s'inscrire avec une adresse e-mail à la place.
 
 -- Champ code promo introuvable --
-• 1xBet : le champ "Code promotionnel" se trouve en bas du formulaire,
-  faire défiler vers le bas si nécessaire.
-• Melbet / Winwin : chercher le champ "Code promo" ou "Code bonus" avant de cliquer
-  sur le bouton final de validation.
-• Paripesa : le code est normalement appliqué automatiquement via le lien ; sinon,
-  chercher le champ "Code promo" dans le formulaire.
+• Paripesa : vérifier si le code est appliqué via le lien ; sinon, chercher le champ
+  "Code promo" ou "Code bonus" avant de valider le formulaire.
 Si le champ n'est pas visible, essayer un autre navigateur ou vider le cache.
 
 
@@ -112,7 +75,7 @@ Si le champ n'est pas visible, essayer un autre navigateur ou vider le cache.
 
 -- Bonus non activé après inscription --
 Causes possibles :
-  - Le code FTC17 n'a pas été entré lors de l'inscription → non corrigible après coup.
+  - Le code ZEL55  n'a pas été entré lors de l'inscription → non corrigible après coup.
   - Le montant déposé est insuffisant pour déclencher le bonus (vérifier les conditions).
   - Le compte existait déjà avant cette inscription (le bonus est réservé aux nouveaux comptes).
 Solution : contacter le support du bookmaker en expliquant la situation.
@@ -131,14 +94,6 @@ Solution : contacter le support du bookmaker en expliquant la situation.
 • La vérification d'identité (KYC) est obligatoire avant tout premier retrait.
 
 
-=== RECOMMANDATION BOOKMAKER ===
-
-Si un abonné demande quel bookmaker choisir, recommander 1xBet en priorité :
-- Large choix de sports et de marchés
-- Cotes compétitives
-- Application mobile disponible
-- Compatible Mobile Money dans la plupart des pays d'Afrique francophone
-
-Melbet, Paripesa et Winwin restent d'excellentes alternatives avec les mêmes
-conditions d'accès (code FTC17 + dépôt minimum 10 $).
+Pour toute question sur l'inscription ou le code promo, ne présenter que Paripesa.
+Ne pas recommander ni fournir de liens vers d'autres bookmakers.
 `.trim();
