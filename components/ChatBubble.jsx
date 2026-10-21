@@ -32,8 +32,8 @@ export default function ChatBubble({ sender, text, children }) {
       <div
         className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm shadow-sm ${
           isUser
-            ? 'bg-green-600 text-white rounded-br-sm leading-relaxed'
-            : 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-bl-sm'
+            ? 'bg-[#2aabee] text-white rounded-br-sm leading-relaxed shadow-blue-500/10'
+            : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 rounded-bl-sm border border-slate-200/70 dark:border-slate-700 shadow-sm'
         }`}
       >
         {content}

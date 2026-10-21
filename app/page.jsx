@@ -70,7 +70,7 @@ export default function Page() {
 
   return (
     <div className={isDark ? 'dark' : ''}>
-      <div className="flex flex-col h-dvh max-w-md mx-auto bg-gradient-to-b from-slate-50 via-gray-100 to-emerald-50/40 dark:from-gray-950 dark:via-gray-950 dark:to-emerald-950/30 text-gray-900 dark:text-white overflow-hidden shadow-2xl shadow-gray-900/10">
+      <div className="flex flex-col h-dvh max-w-md mx-auto bg-[#eef3f7] dark:bg-slate-950 text-gray-900 dark:text-white overflow-hidden shadow-2xl shadow-gray-900/10">
 
         <Header isDark={isDark} onToggleTheme={() => setIsDark((d) => !d)} />
 

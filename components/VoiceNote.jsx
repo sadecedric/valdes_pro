@@ -26,7 +26,6 @@ function formatTime(sec) {
 }
 
 const SPEEDS = [1, 1.5, 2];
-const WAVE_HEIGHTS = [8, 14, 22, 12, 28, 36, 20, 12, 24, 32, 18, 10, 26, 38, 30, 16, 24, 12, 34, 22, 14, 28, 36, 18, 10, 24, 16, 30, 20, 12];
 
 export default function VoiceNote({ src }) {
   const audioRef = useRef(null);
@@ -98,40 +97,19 @@ export default function VoiceNote({ src }) {
   const progressPct = duration ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="w-60 max-w-full py-1" role="group" aria-label="Message vocal de bienvenue">
-      <p className="mb-3 flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">
-        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-3.5 w-3.5">
-          <rect x="9" y="2" width="6" height="12" rx="3" />
-          <path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8" />
-        </svg>
-        Un mot de bienvenue
-      </p>
+    <div className="w-80 max-w-full rounded-[22px] border border-slate-700/80 bg-[#111a2f] px-4 py-3.5 text-white shadow-lg shadow-slate-950/20" role="group" aria-label="Message vocal de bienvenue">
       <div className="flex items-center gap-3">
         <audio ref={audioRef} src={src} preload="metadata" aria-label="Message vocal de bienvenue" />
         <button
           type="button"
           onClick={togglePlay}
-          className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center text-white bg-emerald-600 shadow-md shadow-emerald-600/20 hover:bg-emerald-500 active:scale-95 transition focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500"
+          className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center text-white bg-[#ff1f5a] shadow-md shadow-[#ff1f5a]/30 hover:bg-[#ff4778] active:scale-95 transition focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff1f5a]"
           aria-label={isPlaying ? 'Pause' : 'Lecture'}
         >
           {isPlaying ? <PauseIcon /> : <PlayIcon />}
         </button>
 
-        <div className="flex-1 min-w-0">
-          <div className="relative h-10 rounded-md focus-within:ring-2 focus-within:ring-emerald-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-200 dark:focus-within:ring-offset-gray-800">
-            <svg aria-hidden="true" viewBox="0 0 150 40" preserveAspectRatio="none" className="h-full w-full text-gray-400/50 dark:text-gray-500/60">
-              {WAVE_HEIGHTS.map((height, index) => (
-                <rect
-                  key={index}
-                  x={index * 5 + 1}
-                  y={(40 - height) / 2}
-                  width="3"
-                  height={height}
-                  rx="1.5"
-                  className={index / WAVE_HEIGHTS.length * 100 < progressPct ? 'fill-emerald-600 dark:fill-emerald-400' : 'fill-current'}
-                />
-              ))}
-            </svg>
+        <div className="flex-1 min-w-0 pt-0.5">
           <input
             type="range"
             min="0"
@@ -142,20 +120,17 @@ export default function VoiceNote({ src }) {
             disabled={!duration}
             aria-label="Position de lecture"
             aria-valuetext={`${formatTime(currentTime)} sur ${formatTime(duration)}`}
-            className="absolute inset-0 h-full w-full cursor-pointer opacity-0 disabled:cursor-default"
+            className="audio-range block w-full cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff1f5a]"
+            style={{ background: `linear-gradient(to right, #cbd5e1 ${progressPct}%, #566176 ${progressPct}%)` }}
           />
-          </div>
-        </div>
-      </div>
-      <div className="mt-2 flex items-center justify-between pl-14">
-        <p className="text-[10px] tabular-nums text-gray-500 dark:text-gray-400">
-          <span className={isPlaying ? 'text-emerald-700 dark:text-emerald-400' : ''}>{formatTime(currentTime)}</span>
-          <span className="mx-1 opacity-50">/</span>{formatTime(duration)}
+          <p className="mt-1 text-sm tabular-nums text-slate-300">
+            {formatTime(currentTime)} / {formatTime(duration)}
         </p>
+        </div>
         <button
           type="button"
           onClick={cycleSpeed}
-          className="min-w-11 rounded-full bg-emerald-600/10 px-2 py-1 text-[11px] font-bold text-emerald-700 transition-colors hover:bg-emerald-600/20 dark:bg-emerald-400/10 dark:text-emerald-400 dark:hover:bg-emerald-400/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500"
+          className="min-w-12 rounded-full border border-slate-600 px-2.5 py-2 text-sm font-bold text-[#ff1f5a] transition-colors hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff1f5a]"
           aria-label={`Vitesse de lecture : ${String(speed).replace('.', ',')} fois. Changer la vitesse`}
           title="Vitesse de lecture"
         >

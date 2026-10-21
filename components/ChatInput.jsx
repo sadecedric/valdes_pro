@@ -36,13 +36,13 @@ export default function ChatInput({ onSend, disabled }) {
         onKeyDown={handleKeyDown}
         placeholder="Écrivez votre message..."
         disabled={disabled}
-        className="flex-1 bg-white/90 dark:bg-gray-900/90 text-gray-900 dark:text-white placeholder-gray-400 rounded-2xl px-4 py-3 text-sm border border-gray-200 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/60 focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        className="flex-1 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder-gray-400 rounded-2xl px-4 py-3 text-sm border border-slate-200 dark:border-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#229ed9]/60 focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         autoComplete="off"
       />
       <button
         type="submit"
         disabled={!value.trim() || disabled}
-        className="flex-shrink-0 w-11 h-11 bg-emerald-600 hover:bg-emerald-500 active:scale-95 disabled:bg-gray-400 dark:disabled:bg-gray-700 disabled:cursor-not-allowed text-white rounded-2xl flex items-center justify-center transition-all shadow-lg shadow-emerald-600/20"
+        className="flex-shrink-0 w-11 h-11 bg-[#229ed9] hover:bg-[#168dcc] active:scale-95 disabled:bg-gray-400 dark:disabled:bg-gray-700 disabled:cursor-not-allowed text-white rounded-2xl flex items-center justify-center transition-all shadow-lg shadow-sky-600/20"
         aria-label="Envoyer"
       >
         <SendIcon />

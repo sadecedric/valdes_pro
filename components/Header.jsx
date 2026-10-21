@@ -54,19 +54,19 @@ export default function Header({ isDark, onToggleTheme }) {
   const router = useRouter();
 
   return (
-    <header className="shrink-0 flex items-center gap-3 px-4 py-3 bg-gray-950/95 backdrop-blur-xl border-b border-emerald-500/20 shadow-lg shadow-gray-950/20 z-10 relative">
+    <header className="shrink-0 flex items-center gap-3 px-4 py-3 bg-[#229ed9] border-b border-white/10 shadow-lg shadow-sky-900/20 z-10 relative">
       <div className="relative shrink-0">
         <img
           src={PROFILE_IMAGE}
           alt={ASSISTANT_NAME}
-          className="w-11 h-11 rounded-full object-cover ring-2 ring-emerald-400 ring-offset-2 ring-offset-gray-950"
+          className="w-11 h-11 rounded-full object-cover ring-2 ring-white/80 ring-offset-2 ring-offset-[#229ed9]"
           onError={(e) => {
             e.target.onerror = null;
             e.target.src =
               "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='24' fill='%2316a34a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' fill='white' font-size='18' font-family='sans-serif' font-weight='bold'%3EQP%3C/text%3E%3C/svg%3E";
           }}
         />
-        <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 rounded-full ring-2 ring-gray-950" />
+        <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-300 rounded-full ring-2 ring-[#229ed9]" />
       </div>
 
       <div className="flex-1 min-w-0">
@@ -74,8 +74,8 @@ export default function Header({ isDark, onToggleTheme }) {
           {ASSISTANT_NAME}
         </p>
         <div className="flex items-center gap-1.5 mt-0.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-xs text-emerald-300 font-medium">En ligne</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse" />
+          <span className="text-xs text-white/85 font-medium">En ligne</span>
         </div>
       </div>
 
