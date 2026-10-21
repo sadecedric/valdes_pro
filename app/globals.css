@@ -10,6 +10,8 @@ body {
   overflow: hidden;
 }
 
+* { scrollbar-width: thin; scrollbar-color: rgba(16, 185, 129, 0.35) transparent; }
+
 /* ── Markdown dans les bulles assistant ───────────────────────────────────── */
 .markdown { line-height: 1.6; }
 
