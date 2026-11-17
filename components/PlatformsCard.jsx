@@ -106,7 +106,7 @@ export default function PlatformsCard() {
             className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#25d366] px-4 py-3 text-sm font-bold text-white shadow-md shadow-emerald-500/20 transition-colors hover:bg-[#1fbe5a] active:scale-[0.99]"
           >
             <WhatsAppIcon />
-            Mon WhatsApp
+            Ma chaîne WhatsApp
           </a>
         )}
       </div>

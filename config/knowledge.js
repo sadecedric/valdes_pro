@@ -41,9 +41,13 @@ comme preuve pour la vérification.
 
 Une fois les deux conditions remplies, le joueur revient vers APPLE BOT avec sa
 preuve de dépôt pour obtenir l'accès aux exploits et aux analyses exclusives
-d'Apple of Fortune et des autres jeux. Ne pas inventer de lien, de groupe ni de
-coordonnées : inviter le joueur à utiliser les coordonnées de l'administrateur
-qu'il possède déjà.
+d'Apple of Fortune et des autres jeux.
+
+Chaîne WhatsApp officielle (seul lien autorisé, à donner après l'inscription) :
+https://whatsapp.com/channel/0029Vb9CIpVCMY0Qw0Tx5g2z
+
+Ne pas inventer d'autre lien, groupe ni coordonnées : pour tout le reste,
+inviter le joueur à utiliser les coordonnées de l'administrateur qu'il possède déjà.
 
 Ne jamais promettre de gain. L'inscription ne garantit ni coupon ni gain.
 
