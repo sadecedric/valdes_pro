@@ -54,19 +54,19 @@ export default function Header({ isDark, onToggleTheme }) {
   const router = useRouter();
 
   return (
-    <header className="shrink-0 flex items-center gap-3 px-4 py-3 bg-[#229ed9] border-b border-white/10 shadow-lg shadow-sky-900/20 z-10 relative">
+    <header className="shrink-0 flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-[#5b21b6] to-[#7c3aed] border-b border-white/10 shadow-lg shadow-violet-900/30 z-10 relative">
       <div className="relative shrink-0">
         <img
           src={PROFILE_IMAGE}
           alt={ASSISTANT_NAME}
-          className="w-11 h-11 rounded-full object-cover ring-2 ring-white/80 ring-offset-2 ring-offset-[#229ed9]"
+          className="w-11 h-11 rounded-2xl object-cover ring-2 ring-white/40"
           onError={(e) => {
             e.target.onerror = null;
             e.target.src =
               "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='24' fill='%2316a34a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' fill='white' font-size='18' font-family='sans-serif' font-weight='bold'%3EQP%3C/text%3E%3C/svg%3E";
           }}
         />
-        <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-300 rounded-full ring-2 ring-[#229ed9]" />
+        <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 rounded-full ring-2 ring-[#6d28d9]" />
       </div>
 
       <div className="flex-1 min-w-0">
@@ -82,7 +82,7 @@ export default function Header({ isDark, onToggleTheme }) {
       {/* Theme toggle */}
       <button
         onClick={onToggleTheme}
-        className="p-2 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-colors shrink-0"
+        className="p-2 rounded-full text-white/80 hover:text-white hover:bg-white/15 transition-colors shrink-0"
         aria-label="Changer le thème"
       >
         {isDark ? <SunIcon /> : <MoonIcon />}
@@ -92,8 +92,8 @@ export default function Header({ isDark, onToggleTheme }) {
       <button
         type="button"
         onClick={() => setMenuOpen((v) => !v)}
-        className="shrink-0 flex items-center justify-center w-9 h-9 rounded-xl transition-colors text-gray-400 hover:text-white hover:bg-gray-700"
-        style={{ background: menuOpen ? 'rgba(22,163,74,0.12)' : undefined }}
+        className="shrink-0 flex items-center justify-center w-9 h-9 rounded-xl transition-colors text-white/80 hover:text-white hover:bg-white/15"
+        style={{ background: menuOpen ? 'rgba(255,255,255,0.18)' : undefined }}
         aria-label="Menu"
       >
         {menuOpen ? <CloseIcon /> : <BurgerIcon />}
@@ -101,13 +101,13 @@ export default function Header({ isDark, onToggleTheme }) {
 
       {/* Dropdown menu */}
       {menuOpen && (
-        <div className="absolute top-full right-3 mt-2 w-52 rounded-xl overflow-hidden z-50 bg-gray-900 border border-gray-700 shadow-xl">
+        <div className="absolute top-full right-3 mt-2 w-52 rounded-xl overflow-hidden z-50 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl">
           <button
             type="button"
             onClick={() => { setMenuOpen(false); router.push('/admin'); }}
-            className="flex items-center gap-3 w-full px-4 py-3 text-sm text-left text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
+            className="flex items-center gap-3 w-full px-4 py-3 text-sm text-left text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
           >
-            <span className="text-green-500"><LockIcon /></span>{' '}
+            <span className="text-violet-400"><LockIcon /></span>{' '}
             Connexion Admin
           </button>
         </div>

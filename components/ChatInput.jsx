@@ -34,15 +34,15 @@ export default function ChatInput({ onSend, disabled }) {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="Écrivez votre message..."
+        placeholder="Écris ta question..."
         disabled={disabled}
-        className="flex-1 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder-gray-400 rounded-2xl px-4 py-3 text-sm border border-slate-200 dark:border-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#229ed9]/60 focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        className="flex-1 bg-violet-50 dark:bg-slate-800 text-gray-900 dark:text-white placeholder-violet-400/80 dark:placeholder-slate-500 rounded-full px-5 py-3.5 text-[15px] border border-violet-200/80 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         autoComplete="off"
       />
       <button
         type="submit"
         disabled={!value.trim() || disabled}
-        className="flex-shrink-0 w-11 h-11 bg-[#229ed9] hover:bg-[#168dcc] active:scale-95 disabled:bg-gray-400 dark:disabled:bg-gray-700 disabled:cursor-not-allowed text-white rounded-2xl flex items-center justify-center transition-all shadow-lg shadow-sky-600/20"
+        className="flex-shrink-0 w-12 h-12 bg-[#7c3aed] hover:bg-[#6d28d9] active:scale-95 disabled:bg-violet-300 dark:disabled:bg-slate-700 disabled:cursor-not-allowed text-white rounded-full flex items-center justify-center transition-all shadow-lg shadow-violet-600/25"
         aria-label="Envoyer"
       >
         <SendIcon />

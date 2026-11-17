@@ -6,7 +6,7 @@ import ChatBubble from '@/components/ChatBubble';
 import VoiceNote from '@/components/VoiceNote';
 import PlatformsCard from '@/components/PlatformsCard';
 import ChatInput from '@/components/ChatInput';
-import { WELCOME_MESSAGE } from '@/lib/config';
+import { WELCOME_MESSAGE, QUICK_REPLIES } from '@/lib/config';
 import { sendMessage } from '@/services/chatApi';
 
 function getSessionId() {
@@ -17,7 +17,7 @@ function getSessionId() {
 }
 
 export default function Page() {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [messages, setMessages] = useState([]);
   const [history, setHistory] = useState([
     { role: 'assistant', content: WELCOME_MESSAGE },
@@ -70,16 +70,32 @@ export default function Page() {
 
   return (
     <div className={isDark ? 'dark' : ''}>
-      <div className="flex flex-col h-dvh max-w-md mx-auto bg-[#eef3f7] dark:bg-slate-950 text-gray-900 dark:text-white overflow-hidden shadow-2xl shadow-gray-900/10">
+      <div className="flex flex-col h-dvh max-w-md mx-auto bg-[#f5edff] dark:bg-slate-950 text-gray-900 dark:text-white overflow-hidden shadow-2xl shadow-violet-900/10">
 
         <Header isDark={isDark} onToggleTheme={() => setIsDark((d) => !d)} />
 
-        <main className="flex-1 overflow-y-auto min-h-0 px-3 py-5 space-y-3 scrollbar-thin">
+        <main className="flex-1 overflow-y-auto min-h-0 px-3 py-4 space-y-3 scrollbar-thin">
           <ChatBubble sender="assistant" text={WELCOME_MESSAGE} />
 
           <ChatBubble sender="assistant">
             <VoiceNote src="/welcome.ogg" />
           </ChatBubble>
+
+          {messages.length === 0 && (
+            <div className="space-y-2.5 pt-1">
+              {QUICK_REPLIES.map((q) => (
+                <button
+                  key={q}
+                  type="button"
+                  onClick={() => handleSend(q)}
+                  disabled={isLoading}
+                  className="w-full rounded-2xl border-2 border-violet-300 bg-white/70 px-4 py-3.5 text-left text-[15px] font-bold text-violet-800 transition-colors hover:bg-violet-100 active:scale-[0.99] disabled:opacity-50 dark:border-violet-500/40 dark:bg-slate-900/60 dark:text-violet-200 dark:hover:bg-slate-800"
+                >
+                  {q}
+                </button>
+              ))}
+            </div>
+          )}
 
           {messages.map((msg) => (
             <ChatBubble key={msg.id} sender={msg.sender} text={msg.text} />
@@ -88,9 +104,9 @@ export default function Page() {
           {isLoading && (
             <ChatBubble sender="assistant">
               <span className="flex gap-1 items-center py-0.5">
-                <span className="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 animate-bounce [animation-delay:0ms]" />
-                <span className="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 animate-bounce [animation-delay:150ms]" />
-                <span className="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 animate-bounce [animation-delay:300ms]" />
+                <span className="w-2 h-2 rounded-full bg-violet-400 dark:bg-violet-500 animate-bounce [animation-delay:0ms]" />
+                <span className="w-2 h-2 rounded-full bg-violet-400 dark:bg-violet-500 animate-bounce [animation-delay:150ms]" />
+                <span className="w-2 h-2 rounded-full bg-violet-400 dark:bg-violet-500 animate-bounce [animation-delay:300ms]" />
               </span>
             </ChatBubble>
           )}
@@ -98,7 +114,7 @@ export default function Page() {
           <div ref={bottomRef} />
         </main>
 
-        <div className="flex-shrink-0 bg-white/70 dark:bg-gray-950/80 backdrop-blur-xl border-t border-gray-200/80 dark:border-gray-800/80">
+        <div className="flex-shrink-0 bg-white dark:bg-slate-900 border-t border-violet-100 dark:border-slate-800">
           <PlatformsCard />
           <ChatInput onSend={handleSend} disabled={isLoading} />
         </div>

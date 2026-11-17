@@ -10,7 +10,7 @@ body {
   overflow: hidden;
 }
 
-* { scrollbar-width: thin; scrollbar-color: rgba(16, 185, 129, 0.35) transparent; }
+* { scrollbar-width: thin; scrollbar-color: rgba(124, 58, 237, 0.35) transparent; }
 
 /* ── Markdown dans les bulles assistant ───────────────────────────────────── */
 .markdown { line-height: 1.6; }
@@ -21,15 +21,16 @@ body {
 .markdown p           { margin-bottom: 0.5rem; }
 .markdown p:last-child { margin-bottom: 0; }
 
-.markdown strong      { font-weight: 700; color: #f9fafb; }
+.markdown strong      { font-weight: 700; color: inherit; }
 
 .markdown ul          { list-style: disc; margin-left: 1.25rem; margin-bottom: 0.5rem; }
 .markdown ol          { list-style: decimal; margin-left: 1.25rem; margin-bottom: 0.5rem; }
 .markdown li          { margin-bottom: 0.25rem; line-height: 1.5; }
 .markdown li:last-child { margin-bottom: 0; }
 
-.markdown a           { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
-.markdown a:hover     { color: #93c5fd; }
+.markdown a           { color: #7c3aed; text-decoration: underline; text-underline-offset: 2px; }
+.markdown a:hover     { color: #6d28d9; }
+.dark .markdown a     { color: #c4b5fd; }
 
 /* ── Range input (lecteur audio) ──────────────────────────────────────────── */
 .audio-range {
@@ -47,17 +48,17 @@ body {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #22c55e;
+  background: #7c3aed;
   cursor: pointer;
   margin-top: -4px;
-  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.25);
 }
 
 .audio-range::-moz-range-thumb {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #22c55e;
+  background: #7c3aed;
   border: none;
   cursor: pointer;
 }

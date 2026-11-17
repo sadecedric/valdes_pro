@@ -97,13 +97,13 @@ export default function VoiceNote({ src }) {
   const progressPct = duration ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="w-80 max-w-full rounded-[22px] border border-slate-700/80 bg-[#111a2f] px-4 py-3.5 text-white shadow-lg shadow-slate-950/20" role="group" aria-label="Message vocal de bienvenue">
+    <div className="w-72 max-w-full rounded-2xl border border-violet-100 bg-white px-3 py-2.5 text-slate-800 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100" role="group" aria-label="Message vocal de bienvenue">
       <div className="flex items-center gap-3">
         <audio ref={audioRef} src={src} preload="metadata" aria-label="Message vocal de bienvenue" />
         <button
           type="button"
           onClick={togglePlay}
-          className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center text-white bg-[#ff1f5a] shadow-md shadow-[#ff1f5a]/30 hover:bg-[#ff4778] active:scale-95 transition focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff1f5a]"
+          className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white bg-[#22c55e] shadow-md shadow-emerald-500/30 hover:bg-[#16a34a] active:scale-95 transition focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500"
           aria-label={isPlaying ? 'Pause' : 'Lecture'}
         >
           {isPlaying ? <PauseIcon /> : <PlayIcon />}
@@ -120,17 +120,17 @@ export default function VoiceNote({ src }) {
             disabled={!duration}
             aria-label="Position de lecture"
             aria-valuetext={`${formatTime(currentTime)} sur ${formatTime(duration)}`}
-            className="audio-range block w-full cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff1f5a]"
-            style={{ background: `linear-gradient(to right, #cbd5e1 ${progressPct}%, #566176 ${progressPct}%)` }}
+            className="audio-range block w-full cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-500"
+            style={{ background: `linear-gradient(to right, #7c3aed ${progressPct}%, #ddd6fe ${progressPct}%)` }}
           />
-          <p className="mt-1 text-sm tabular-nums text-slate-300">
+          <p className="mt-1 text-xs font-semibold tabular-nums text-slate-500 dark:text-slate-400">
             {formatTime(currentTime)} / {formatTime(duration)}
         </p>
         </div>
         <button
           type="button"
           onClick={cycleSpeed}
-          className="min-w-12 rounded-full border border-slate-600 px-2.5 py-2 text-sm font-bold text-[#ff1f5a] transition-colors hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff1f5a]"
+          className="min-w-11 rounded-full bg-violet-100 px-2.5 py-1.5 text-xs font-bold text-violet-700 transition-colors hover:bg-violet-200 dark:bg-slate-700 dark:text-violet-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500"
           aria-label={`Vitesse de lecture : ${String(speed).replace('.', ',')} fois. Changer la vitesse`}
           title="Vitesse de lecture"
         >

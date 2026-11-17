@@ -30,10 +30,10 @@ export default function ChatBubble({ sender, text, children }) {
   return (
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
       <div
-        className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm shadow-sm ${
+        className={`max-w-[82%] px-4 py-3 rounded-2xl text-[15px] shadow-sm ${
           isUser
-            ? 'bg-[#2aabee] text-white rounded-br-sm leading-relaxed shadow-blue-500/10'
-            : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 rounded-bl-sm border border-slate-200/70 dark:border-slate-700 shadow-sm'
+            ? 'bg-[#7c3aed] text-white rounded-br-md leading-relaxed shadow-violet-500/20'
+            : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 rounded-bl-md border border-violet-100 dark:border-slate-700 shadow-sm shadow-violet-900/5'
         }`}
       >
         {content}
